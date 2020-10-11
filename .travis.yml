@@ -1,0 +1,42 @@
+language: dart
+
+dart:
+- 2.10.1
+
+jobs:
+  include:
+  - stage: analyze_and_format
+    name: "Analyze"
+    os: linux
+    script: dartanalyzer --enable-experiment=non-nullable --fatal-warnings --fatal-infos .
+
+  - stage: analyze_and_format
+    name: "Format"
+    os: linux
+    script: dartfmt -n --set-exit-if-changed .
+
+  - stage: test
+    name: "VM Tests"
+    os: linux
+    script: 
+      - pub global activate coverage
+      - dart test -p vm --coverage=coverage
+      - pub global run coverage:format_coverage --in coverage/test/maybe_slow_future_test.dart.vm.json --out coverage/lcov.info --lcov --packages=.dart_tool/package_config.json --report-on=lib/
+      - bash <(curl -s https://codecov.io/bash)
+
+  - stage: test
+    name: "Web Tests"
+    os: linux
+    script: pub run --enable-experiment=non-nullable test -p chrome
+
+stages:
+- analyze_and_format
+- test
+
+# Only building master means that we don't run two builds for each pull request.
+branches:
+  only: [main]
+
+cache:
+  directories:
+  - $HOME/.pub-cache
