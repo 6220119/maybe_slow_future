@@ -1,0 +1,16 @@
+name: maybe_slow_future
+description: A package addding a "slow future" detection callback.
+version: 0.0.1
+homepage: https://github.com/6220119
+repository: https://github.com/6220119/<TODO>
+issue_tracker: https://github.com/6220119/<TODO>/issues
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+# dependencies:
+
+dev_dependencies:
+  test: ^1.0.0
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
