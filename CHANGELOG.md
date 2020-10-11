@@ -1,3 +1,4 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - Initial stable release
 
-* TODO: Describe initial release.
+* Implement extension method `Future.onSlow`
+* Implement `maybeSlowFuture`
