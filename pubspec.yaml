@@ -1,6 +1,6 @@
 name: maybe_slow_future
 description: A package addding a "slow future" detection callback.
-version: 1.0.0+1
+version: 1.0.1
 homepage: https://github.com/6220119/maybe_slow_future
 repository: https://github.com/6220119/maybe_slow_future
 issue_tracker: https://github.com/6220119/maybe_slow_future/issues
