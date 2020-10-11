@@ -21,7 +21,7 @@ jobs:
     script: 
       - pub global activate coverage
       - dart test -p vm --coverage=coverage
-      - pub global run coverage:format_coverage --in coverage/test/maybe_slow_future_test.dart.vm.json --out coverage/lcov.info --lcov --packages=.dart_tool/package_config.json --report-on=lib/
+      - pub global run coverage:format_coverage --in coverage/test/maybe_slow_future_test.dart.vm.json --out coverage/lcov.info --lcov --packages=.packages --report-on=lib/
       - bash <(curl -s https://codecov.io/bash)
 
   - stage: test
