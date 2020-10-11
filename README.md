@@ -1,6 +1,7 @@
 # maybe_slow_future
-
-<!-- [![pub package](https://img.shields.io/pub/v/maybe_slow_future.svg)](https://pub.dartlang.org/packages/maybe_slow_future) -->
+[![pub package](https://img.shields.io/pub/v/maybe_slow_future.svg)](https://pub.dartlang.org/packages/maybe_slow_future)
+[![codecov](https://codecov.io/gh/6220119/maybe_slow_future/branch/main/graph/badge.svg)](https://codecov.io/gh/6220119/maybe_slow_future)
+[![Build Status](https://travis-ci.org/6220119/maybe_slow_future.svg?branch=main)](https://travis-ci.org/6220119/maybe_slow_future)
 
 Add a callback to tell you the future is taking longer than an expected duration to complete.
 
@@ -8,7 +9,7 @@ Add a callback to tell you the future is taking longer than an expected duration
 To use this plugin, add `maybe_slow_future` as a dependency in your pubspec.yaml file.
 ```yaml
 dependencies:
-  maybe_slow_future: ^1.0.0
+  maybe_slow_future: ^1.0.2
 ```
 
 ### Example

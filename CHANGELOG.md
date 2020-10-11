@@ -1,3 +1,7 @@
+## [1.0.2] - Version bump
+
+* Minor update to document
+
 ## [1.0.1] - Version bump
 
 * Minor update to document
